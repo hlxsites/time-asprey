@@ -8,8 +8,10 @@
 --color-gray: #817C89;
 --color-deep-violet: #405;
 --color-black: #000;
+--color-dark: #FFF;
 --background-color: #FFF;
 --highlight-text-color: #000;
+--dark-background-color: #000;
 --overlay-background-color: #eee;
 --highlight-background-color: #f7f9f9;
 --footer-background-color: #2B0E43;
@@ -421,11 +423,43 @@ main .section.deep-background h1 {
   text-align: center;
 }
 
+main .section.dark {
+  background-color: var(--dark-background-color);
+  color: var(--color-dark);
+}
+
+main .section.dark > .columns-wrapper {
+  max-width: 1440px;
+}
+
+.section.dark > .columns-wrapper > div > div > div:first-child {
+  padding-left: 2pc;
+  padding-right: 2pc;
+}
+
+main .section.dark > div > div > div > div > h1, h2, p {
+  color: var(--color-dark);
+}
+
+main .section.dark > div > div > div > div > h1, h2 {
+  font-size: var(--heading-font-size-m);
+  text-align: left;
+}
+
+main .section.dark a.button.primary, button.primary {
+  background-color: transparent;
+  border-color: var(--color-dark);
+}
+
 @media screen and (max-width: 600px) {
     .section.column-left-light .columns >div >div h1 {
         font-size: 30px;
         font-weight: 400;
         max-width: none;
+    }
+
+    .section.dark > div > div > div > div > h1, h2 {
+        font-size: var(--heading-font-size-xl);
     }
 }
 
@@ -440,6 +474,11 @@ main .section.deep-background h1 {
     .section.column-left-light .columns >div >div p {
         margin-left: var(--layout-margin-large);
         margin-right: var(--layout-margin-large);
+    }
+
+    main .section.dark > .columns-wrapper > div > div > div:first-child {
+      padding-left: 75px;
+      padding-right: 75px;
     }
 }
 
