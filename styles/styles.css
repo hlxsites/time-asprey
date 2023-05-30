@@ -535,7 +535,8 @@ main .section.narrow h1 {
 
 .column-light .columns >div >div >h3,
 .column-light .columns >div >div >h5 {
-    font-size: 30px;
+    font-size: var(--heading-font-size-xl);
     font-weight: 400;
     max-width: none;
 }
+

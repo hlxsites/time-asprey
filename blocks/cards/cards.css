@@ -3,12 +3,10 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .cards > ul > li {
-  border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color)
 }
 
@@ -28,4 +26,39 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards-wrapper {
+    margin-bottom: 75px;
+}
+
+.cards-container {
+    margin: 0 auto;
+    float: none;
+    max-width: 1440px;
+}
+
+.default-content-wrapper {
+    margin: 0 auto;
+    float: none;
+    max-width: 1440px;
+    text-align: center;
+}
+
+.default-content-wrapper >h1 {
+    font-size: var(--heading-font-size-l);
+    color: #000;
+}
+
+.default-content-wrapper >h2 {
+    color: #000;
+}
+
+.default-content-wrapper >p {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.default-content-wrapper >p:last-child {
+    margin-bottom: 75px;
 }
