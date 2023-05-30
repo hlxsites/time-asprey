@@ -30,6 +30,20 @@
   object-fit: cover;
 }
 
+.columns.history > div > div > h3, p {
+  text-align: left;
+}
+
+.columns.history > div:first-child {
+  margin-left: 16.66%;
+  vertical-align: top;
+}
+
+.columns.history > div:last-child {
+  margin-right: 16.66%;
+}
+
+
 @media (max-width: 600px) {
   .columns > div > .columns-img-col {
     order: 2;
