@@ -357,6 +357,22 @@ main .section.highlight {
     margin-bottom: 20px;
 }
 
+.section .default-content-wrapper {
+  margin-left: 25%;
+  width: 50%;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  margin-top: 75px;
+}
+
+.section .default-content-wrapper h2 {
+  font-size: var(--heading-font-size-l);
+}
+
+.section .default-content-wrapper p {
+  font-size: var(--heading-font-size-s);
+}
+
 @media screen and (min-width: 601px) {
     .history .columns >div >div {
         max-width: 480px;
@@ -364,6 +380,9 @@ main .section.highlight {
         align-self: flex-start;
         padding: unset;
         margin-bottom: unset;
+    }
+    .section .default-content-wrapper h2 {
+      font-size: var(--heading-font-size-s);
     }
 }
 
