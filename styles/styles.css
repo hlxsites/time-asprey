@@ -357,7 +357,7 @@ main .section.highlight {
     margin-bottom: 20px;
 }
 
-.section .default-content-wrapper {
+.quote .default-content-wrapper {
   margin-left: 25%;
   width: 50%;
   padding-top: 55px;
@@ -365,11 +365,11 @@ main .section.highlight {
   margin-top: 75px;
 }
 
-.section .default-content-wrapper h2 {
+.quote .default-content-wrapper h2 {
   font-size: var(--heading-font-size-l);
 }
 
-.section .default-content-wrapper p {
+.quote .default-content-wrapper p {
   font-size: var(--heading-font-size-s);
 }
 
@@ -381,7 +381,7 @@ main .section.highlight {
         padding: unset;
         margin-bottom: unset;
     }
-    .section .default-content-wrapper h2 {
+    .quote .default-content-wrapper h2 {
       font-size: var(--heading-font-size-s);
     }
 }
