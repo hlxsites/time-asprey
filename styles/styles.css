@@ -103,7 +103,7 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    font-size: 22px;
+    font-size: var(--heading-font-size-s);
 }
 
 h3, h3 a {
@@ -298,6 +298,12 @@ main .section.highlight {
   color: var(--highlight-text-color);
 }
 
+.description h2 {
+  font-size: 30px;
+  font-weight: 400;
+  max-width: none;
+}
+
 .dark > div > div > div > div > h1, .dark > div > div > div > div >  h2, .dark > div > div > div > div > p {
   color: var(--color-dark);
 }
@@ -307,10 +313,9 @@ main .section.highlight {
   text-align: left;
 }
 
-.description h2 {
-    font-size: 30px;
-    font-weight: 400;
-    max-width: none;
+.default-content-wrapper {
+  margin-left: 8.33%;
+  width: 83.3%;
 }
 
 .quote .default-content-wrapper {
@@ -329,11 +334,6 @@ main .section.highlight {
   font-size: var(--heading-font-size-s);
 }
 
-.default-content-wrapper {
-  margin-left: 8.33%;
-  width: 83.3%;
-}
-
 .column-light .columns >div >div >h2,
 .column-light .columns >div >div >h3,
 .column-light .columns >div >div >h5,
@@ -343,6 +343,11 @@ main .section.highlight {
 }
 
 @media screen and (min-width: 601px) {
+  .quote .default-content-wrapper > h2, .quote .default-content-wrapper > p {
+    margin-left: 25%;
+    width: 50%;
+  }
+
   .column-light .columns >div >div >h2,
   .column-light .columns >div >div >h3,
   .column-light .columns >div >div >h5,
@@ -370,10 +375,7 @@ main .section.highlight {
     margin: auto;
     margin-top: 75px;
   }
-  .quote .default-content-wrapper > h2, .quote .default-content-wrapper > p {
-    margin-left: 25%;
-    width: 50%;
-  }
+
 }
 
 .aboutus-highlight .columns >div {
@@ -419,6 +421,7 @@ main .section.highlight {
         padding: unset;
         margin-bottom: unset;
     }
+    
     .quote .default-content-wrapper h2 {
       font-size: var(--heading-font-size-s);
     }
@@ -508,6 +511,11 @@ main .section.dark > .columns-wrapper {
 .deep-background-special .columns > div > div:last-child {
   margin-left: var(--layout-margin-small);
   margin-right: var(--layout-margin-small);
+}
+
+.description .columns >div >div:first-child {
+  padding-left: var(--layout-margin-small);
+  padding-right: var(--layout-margin-small);
 }
 
 .section.dark > .columns-wrapper > div > div > div:first-child {
@@ -620,11 +628,6 @@ main .section.narrow {
   text-align: center;
   width: 100%;
   padding: 10px 5px;
-}
-
-.description .columns >div >div:first-child {
-    padding-left: var(--layout-margin-small);
-    padding-right: var(--layout-margin-small);
 }
 
 @media screen and (min-width: 601px) {
