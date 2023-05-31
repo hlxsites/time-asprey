@@ -405,6 +405,16 @@ main .section.highlight {
     text-align: center;
 }
 
+.section.column-left-light > div {
+  max-width: 1440px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.section.column-left-light > div > div {
+  margin-bottom: 75px;
+}
+
 .history .columns >div >div {
     margin-top: 0;
     align-self: flex-start;
@@ -467,7 +477,6 @@ main .section.narrow h1 {
 .section.column-left-light {
     float: none;
     margin: 0 auto;
-    max-width: 1440px;
     background-color: var(--highlight-background-color);
 }
 
