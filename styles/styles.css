@@ -488,7 +488,7 @@ main .section.dark {
   color: var(--color-dark);
 }
 
-main .section.dark > .columns-wrapper {
+main .section > .columns-wrapper {
   max-width: 1440px;
 }
 
@@ -529,7 +529,7 @@ main .section.dark a.button.primary, button.primary {
 }
 
 @media screen and (max-width: 600px) {
-  .section.dark > div > div > div > div > h1, h2 {
+  .section.dark > div > div > div > div > h1, .section.dark > div > div > div > div > h2 {
     font-size: var(--heading-font-size-xl);
   }
 
