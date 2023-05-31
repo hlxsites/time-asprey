@@ -30,12 +30,22 @@
 
 .cards-wrapper {
     margin-bottom: 75px;
+    max-width: 1440px;
+}
+
+.cards-wrapper > div.cards {
+  margin-bottom: 75px;
 }
 
 .cards-container {
-    margin: 0 auto;
-    float: none;
-    max-width: 1440px;
+  background-color: var(--highlight-background-color);
+  margin: 0 auto;
+  float: none;
+}
+
+.cards.padded {
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .default-content-wrapper {
@@ -55,7 +65,6 @@
 }
 
 .default-content-wrapper >p {
-    max-width: 480px;
     margin: 0 auto;
 }
 

@@ -8,8 +8,10 @@
 --color-gray: #817C89;
 --color-deep-violet: #405;
 --color-black: #000;
+--color-dark: #FFF;
 --background-color: #FFF;
 --highlight-text-color: #000;
+--dark-background-color: #000;
 --overlay-background-color: #eee;
 --highlight-background-color: #f7f9f9;
 --footer-background-color: #2B0E43;
@@ -101,7 +103,7 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    font-size: 22px;
+    font-size: var(--heading-font-size-s);
 }
 
 h3, h3 a {
@@ -297,9 +299,39 @@ main .section.highlight {
 }
 
 .description h2 {
-    font-size: 30px;
-    font-weight: 400;
-    max-width: none;
+  font-size: 30px;
+  font-weight: 400;
+  max-width: none;
+}
+
+.dark > div > div > div > div > h1, .dark > div > div > div > div >  h2, .dark > div > div > div > div > p {
+  color: var(--color-dark);
+}
+
+.dark > div > div > div > div > h1, .dark > div > div > div > div > h2 {
+  font-size: var(--heading-font-size-m);
+  text-align: left;
+}
+
+.default-content-wrapper {
+  margin-left: 8.33%;
+  width: 83.3%;
+}
+
+.quote .default-content-wrapper {
+  margin-left: 25%;
+  width: 50%;
+  padding-top: 55px;
+  margin-top: 75px;
+}
+
+.quote .default-content-wrapper h2 {
+  font-size: var(--heading-font-size-l);
+  text-align: left;
+}
+
+.quote .default-content-wrapper p {
+  font-size: var(--heading-font-size-s);
 }
 
 .column-light .columns >div >div >h2,
@@ -311,13 +343,39 @@ main .section.highlight {
 }
 
 @media screen and (min-width: 601px) {
-    .column-light .columns >div >div >h2,
-    .column-light .columns >div >div >h3,
-    .column-light .columns >div >div >h5,
-    .column-light .columns >div >div >p {
-        margin-left: var(--layout-margin-large);
-        margin-right: var(--layout-margin-large);
-    }
+  .quote .default-content-wrapper > h2, .quote .default-content-wrapper > p {
+    margin-left: 25%;
+    width: 50%;
+  }
+
+  .column-light .columns >div >div >h2,
+  .column-light .columns >div >div >h3,
+  .column-light .columns >div >div >h5,
+  .column-light .columns >div >div >p {
+      margin-left: var(--layout-margin-large);
+      margin-right: var(--layout-margin-large);
+  }
+
+  .section .default-content-wrapper {
+    margin-left: 33%;
+    width: 33%;
+    margin-bottom: 75px;
+  }
+
+  /* .section.quote {
+    
+    display: block;
+  } */
+
+  .quote .default-content-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin: auto;
+    margin-top: 75px;
+  }
+
 }
 
 .aboutus-highlight .columns >div {
@@ -362,6 +420,10 @@ main .section.highlight {
         align-self: flex-start;
         padding: unset;
         margin-bottom: unset;
+    }
+    
+    .quote .default-content-wrapper h2 {
+      font-size: var(--heading-font-size-s);
     }
 }
 
@@ -421,12 +483,61 @@ main .section.deep-background h1 {
   text-align: center;
 }
 
+main .section.dark {
+  background-color: var(--dark-background-color);
+  color: var(--color-dark);
+}
+
+main .section > .columns-wrapper {
+  max-width: 1440px;
+}
+
+.deep-background .columns >div >div:not(.columns-img-col) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--highlight-background-color);
+  text-align: left;
+}
+
+.deep-background-special .columns >div >div:not(.columns-img-col) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--highlight-background-color);
+  text-align: left;
+}
+
+.deep-background-special .columns > div > div:last-child {
+  margin-left: var(--layout-margin-small);
+  margin-right: var(--layout-margin-small);
+}
+
+.description .columns >div >div:first-child {
+  padding-left: var(--layout-margin-small);
+  padding-right: var(--layout-margin-small);
+}
+
+.section.dark > .columns-wrapper > div > div > div:first-child {
+  padding-left: 2pc;
+  padding-right: 2pc;
+}
+
+main .section.dark a.button.primary, button.primary {
+  background-color: transparent;
+  border-color: var(--color-dark);
+}
+
 @media screen and (max-width: 600px) {
-    .section.column-left-light .columns >div >div h1 {
-        font-size: 30px;
-        font-weight: 400;
-        max-width: none;
-    }
+  .section.dark > div > div > div > div > h1, .section.dark > div > div > div > div > h2 {
+    font-size: var(--heading-font-size-xl);
+  }
+
+  .section.column-left-light .columns >div >div h1 {
+    font-size: 30px;
+    font-weight: 400;
+    max-width: none;
+  }
 }
 
 .section.column-left-light .columns >div >div h1,
@@ -440,6 +551,11 @@ main .section.deep-background h1 {
     .section.column-left-light .columns >div >div p {
         margin-left: var(--layout-margin-large);
         margin-right: var(--layout-margin-large);
+    }
+
+    main .section.dark > .columns-wrapper > div > div > div:first-child {
+      padding-left: 75px;
+      padding-right: 75px;
     }
 }
 
@@ -514,24 +630,11 @@ main .section.narrow {
   padding: 10px 5px;
 }
 
-.description .columns >div >div:first-child {
-    padding-left: var(--layout-margin-small);
-    padding-right: var(--layout-margin-small);
-}
-
 @media screen and (min-width: 601px) {
     .description .columns >div >div:first-child {
         padding-left: var(--layout-margin-large);
         padding-right: var(--layout-margin-large);
     }
-}
-
-.deep-background .columns >div >div:not(.columns-img-col) {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--highlight-background-color);
-    text-align: left;
 }
 
 @media screen and (min-width: 601px) {
@@ -548,14 +651,6 @@ main .section.narrow {
     line-height: 1.2;
     color: var(--highlight-background-color);
     text-align: center;
-}
-
-.deep-background-special .columns >div >div:not(.columns-img-col) {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--highlight-background-color);
-    text-align: left;
 }
 
 @media screen and (min-width: 601px) {
@@ -579,11 +674,6 @@ main .section.narrow {
     .deep-background-special .columns >div >div:not(.columns-img-col) >h4 {
         margin: 40px var(--layout-margin-large);
     }
-}
-
-.deep-background-special .columns > div > div:last-child {
-    margin-left: var(--layout-margin-small);
-    margin-right: var(--layout-margin-small);
 }
 
 @media screen and (min-width: 601px) {
