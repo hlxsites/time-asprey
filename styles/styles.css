@@ -298,10 +298,41 @@ main .section.highlight {
   color: var(--highlight-text-color);
 }
 
+.dark > div > div > div > div > h1, .dark > div > div > div > div >  h2, .dark > div > div > div > div > p {
+  color: var(--color-dark);
+}
+
+.dark > div > div > div > div > h1, .dark > div > div > div > div > h2 {
+  font-size: var(--heading-font-size-m);
+  text-align: left;
+}
+
 .description h2 {
     font-size: 30px;
     font-weight: 400;
     max-width: none;
+}
+
+.quote .default-content-wrapper {
+  margin-left: 25%;
+  width: 50%;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  margin-top: 75px;
+}
+
+.quote .default-content-wrapper h2 {
+  font-size: var(--heading-font-size-l);
+  text-align: left;
+}
+
+.quote .default-content-wrapper p {
+  font-size: var(--heading-font-size-s);
+}
+
+.default-content-wrapper {
+  margin-left: 8.33%;
+  width: 83.3%;
 }
 
 .column-light .columns >div >div >h2,
@@ -313,13 +344,18 @@ main .section.highlight {
 }
 
 @media screen and (min-width: 601px) {
-    .column-light .columns >div >div >h2,
-    .column-light .columns >div >div >h3,
-    .column-light .columns >div >div >h5,
-    .column-light .columns >div >div >p {
-        margin-left: var(--layout-margin-large);
-        margin-right: var(--layout-margin-large);
-    }
+  .column-light .columns >div >div >h2,
+  .column-light .columns >div >div >h3,
+  .column-light .columns >div >div >h5,
+  .column-light .columns >div >div >p {
+      margin-left: var(--layout-margin-large);
+      margin-right: var(--layout-margin-large);
+  }
+
+  .default-content-wrapper {
+    margin-left: 33%;
+    width: 33%;
+  }
 }
 
 .aboutus-highlight .columns >div {
@@ -355,22 +391,6 @@ main .section.highlight {
     text-align: left;
     padding: 0 16.6667%;
     margin-bottom: 20px;
-}
-
-.quote .default-content-wrapper {
-  margin-left: 25%;
-  width: 50%;
-  padding-top: 55px;
-  padding-bottom: 55px;
-  margin-top: 75px;
-}
-
-.quote .default-content-wrapper h2 {
-  font-size: var(--heading-font-size-l);
-}
-
-.quote .default-content-wrapper p {
-  font-size: var(--heading-font-size-s);
 }
 
 @media screen and (min-width: 601px) {
@@ -451,18 +471,30 @@ main .section.dark > .columns-wrapper {
   max-width: 1440px;
 }
 
+.deep-background .columns >div >div:not(.columns-img-col) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--highlight-background-color);
+  text-align: left;
+}
+
+.deep-background-special .columns >div >div:not(.columns-img-col) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--highlight-background-color);
+  text-align: left;
+}
+
+.deep-background-special .columns > div > div:last-child {
+  margin-left: var(--layout-margin-small);
+  margin-right: var(--layout-margin-small);
+}
+
 .section.dark > .columns-wrapper > div > div > div:first-child {
   padding-left: 2pc;
   padding-right: 2pc;
-}
-
-main .section.dark > div > div > div > div > h1, h2, p {
-  color: var(--color-dark);
-}
-
-main .section.dark > div > div > div > div > h1, h2 {
-  font-size: var(--heading-font-size-m);
-  text-align: left;
 }
 
 main .section.dark a.button.primary, button.primary {
@@ -471,15 +503,15 @@ main .section.dark a.button.primary, button.primary {
 }
 
 @media screen and (max-width: 600px) {
-    .section.column-left-light .columns >div >div h1 {
-        font-size: 30px;
-        font-weight: 400;
-        max-width: none;
-    }
+  .section.dark > div > div > div > div > h1, h2 {
+    font-size: var(--heading-font-size-xl);
+  }
 
-    .section.dark > div > div > div > div > h1, h2 {
-        font-size: var(--heading-font-size-xl);
-    }
+  .section.column-left-light .columns >div >div h1 {
+    font-size: 30px;
+    font-weight: 400;
+    max-width: none;
+  }
 }
 
 .section.column-left-light .columns >div >div h1,
@@ -584,14 +616,6 @@ main .section.narrow {
     }
 }
 
-.deep-background .columns >div >div:not(.columns-img-col) {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--highlight-background-color);
-    text-align: left;
-}
-
 @media screen and (min-width: 601px) {
     .deep-background .columns >div >div:not(.columns-img-col) >p {
         margin: 18px var(--layout-margin-large);
@@ -606,14 +630,6 @@ main .section.narrow {
     line-height: 1.2;
     color: var(--highlight-background-color);
     text-align: center;
-}
-
-.deep-background-special .columns >div >div:not(.columns-img-col) {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: var(--highlight-background-color);
-    text-align: left;
 }
 
 @media screen and (min-width: 601px) {
@@ -637,11 +653,6 @@ main .section.narrow {
     .deep-background-special .columns >div >div:not(.columns-img-col) >h4 {
         margin: 40px var(--layout-margin-large);
     }
-}
-
-.deep-background-special .columns > div > div:last-child {
-    margin-left: var(--layout-margin-small);
-    margin-right: var(--layout-margin-small);
 }
 
 @media screen and (min-width: 601px) {
