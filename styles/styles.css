@@ -317,7 +317,6 @@ main .section.highlight {
   margin-left: 25%;
   width: 50%;
   padding-top: 55px;
-  padding-bottom: 55px;
   margin-top: 75px;
 }
 
@@ -352,9 +351,28 @@ main .section.highlight {
       margin-right: var(--layout-margin-large);
   }
 
-  .default-content-wrapper {
+  .section .default-content-wrapper {
     margin-left: 33%;
     width: 33%;
+    margin-bottom: 75px;
+  }
+
+  /* .section.quote {
+    
+    display: block;
+  } */
+
+  .quote .default-content-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin: auto;
+    margin-top: 75px;
+  }
+  .quote .default-content-wrapper > h2, .quote .default-content-wrapper > p {
+    margin-left: 25%;
+    width: 50%;
   }
 }
 
