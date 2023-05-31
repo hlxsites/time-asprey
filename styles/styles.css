@@ -165,7 +165,6 @@ main pre {
 
 a:any-link {
   color: var(--color-deep-violet);
-  text-decoration: none;
 }
 
 a:hover {
