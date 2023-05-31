@@ -4,7 +4,7 @@ import { sampleRUM } from './lib-franklin.js';
 // eslint-disable-next-line import/no-cycle
 import { onDocumentReady } from './scripts.js';
 
-const gtmId = 'G-FTH98G1LJR';
+const gtmId = 'G-5P5P4VYYL1';
 
 // Core Web Vitals RUM collection
 sampleRUM('cwv');
