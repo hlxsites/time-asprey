@@ -1,11 +1,8 @@
 /* block specific CSS goes here */
-
-main .hero-container > div {
-  max-width: unset;
-}
   
 main .hero-container {
   padding: 0;
+  background-color: var(--dark-background-color);
 }
   
 main .hero {
@@ -21,15 +18,9 @@ main .hero h1 {
   color: white;
 }
 
-main .hero picture {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero > div > div > p {
+  margin-left: 25%;
+  width: 50%;
 }
 
 main .hero img {
