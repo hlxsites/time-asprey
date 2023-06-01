@@ -3,7 +3,6 @@ import {
   // buildBlock,
   loadHeader,
   loadFooter,
-  decorateButtons,
   decorateIcons,
   decorateSections,
   decorateBlocks,
@@ -43,6 +42,34 @@ const LCP_BLOCKS = []; // add your LCP blocks to the list
 //   }
 // }
 
+export function decorateButtons(element) {
+  element.querySelectorAll('a').forEach((a) => {
+    a.title = a.title || a.textContent;
+    if (a.href !== a.textContent) {
+      const up = a.parentElement;
+      const twoup = a.parentElement.parentElement;
+      if (!a.querySelector('img')) {
+        if (up.childNodes.length === 1 && (up.tagName === 'P' || up.tagName === 'DIV')) {
+          a.className = 'button primary'; // default
+          up.classList.add('button-container');
+        }
+        if (up.childNodes.length === 1 && up.tagName === 'STRONG'
+          && twoup.childNodes.length === 1 && twoup.tagName === 'P') {
+          a.className = 'button primary';
+          twoup.classList.add('button-container');
+        }
+        if (up.childNodes.length === 1 && up.tagName === 'EM'
+          && twoup.childNodes.length === 1 && twoup.tagName === 'P') {
+          a.className = 'button secondary';
+          twoup.classList.add('button-container');
+        }
+        if (a.href.endsWith('.pdf')) {
+          a.setAttribute('download', '');
+        }
+      }
+    }
+  });
+}
 /**
  * Decorates the main element.
  * @param {Element} main The main element
