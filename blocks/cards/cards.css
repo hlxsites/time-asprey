@@ -68,6 +68,10 @@
     margin: 0 auto;
 }
 
+.default-content-wrapper >p:first-of-type {
+    color: var(--color-accessible-gray);
+}
+
 .default-content-wrapper >p:last-child {
     margin-bottom: 75px;
 }
