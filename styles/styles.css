@@ -24,11 +24,11 @@
 
 /* sizes */
 --heading-font-size-xxl: 60px;
---heading-font-size-xl: 30px;
---heading-font-size-l: 24px;
---heading-font-size-m: 18px;
---heading-font-size-s: 16px;
---heading-font-size-xs: 16px;
+--heading-font-size-xl: 48px;
+--heading-font-size-l: 36px;
+--heading-font-size-m: 30px;
+--heading-font-size-s: 24px;
+--heading-font-size-xs: 22px;
 
   /* body sizes */
 --body-font-size-m: 18px;
@@ -100,7 +100,7 @@ a {
 }
 
 h1, h1 a {
-  font-size: var(--heading-font-size-l);
+  font-size: var(--heading-font-size-s);
 }
 
 h2, h2 a {
@@ -316,7 +316,6 @@ main .section.highlight {
 }
 
 .quote .default-content-wrapper h2 {
-  font-size: var(--heading-font-size-l);
   text-align: left;
 }
 
@@ -390,8 +389,6 @@ main .section.highlight {
 }
 
 .history .default-content-wrapper h1 {
-    font-size: var(--heading-font-size-l);
-    color: #000;
     text-align: center;
 }
 
@@ -460,10 +457,6 @@ main .section.deep-background-special h1 {
   color: var(--asprey-text-color);
 }
 
-main .section.narrow h1 { 
-  font-size: var(--heading-font-size-l); 
-}
-
 .section.column-left-light {
     float: none;
     margin: 0 auto;
@@ -527,14 +520,12 @@ main .section.dark a.button.primary, button.primary {
   border-color: var(--color-dark);
 }
 
-@media screen and (max-width: 619px) {
-  .section.dark > div > div > div > div > h1, .section.dark > div > div > div > div > h2 {
-    font-size: var(--heading-font-size-xl);
-  }
+.section.column-left-light .columns >div >div h1 {
+  font-size: var(--heading-font-size-m);
+}
 
+@media screen and (max-width: 619px) {
   .section.column-left-light .columns >div >div h1 {
-    font-size: 30px;
-    font-weight: 400;
     max-width: none;
   }
 }
@@ -546,16 +537,16 @@ main .section.dark a.button.primary, button.primary {
 }
 
 @media screen and (min-width: 620px) {
-    .section.column-left-light .columns >div >div h1,
-    .section.column-left-light .columns >div >div p {
-        margin-left: var(--layout-margin-large);
-        margin-right: var(--layout-margin-large);
-    }
+  .section.column-left-light .columns >div >div h1,
+  .section.column-left-light .columns >div >div p {
+      margin-left: var(--layout-margin-large);
+      margin-right: var(--layout-margin-large);
+  }
 
     main .section.dark > .columns-wrapper > div > div > div:first-child {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }
 
 @media screen and (min-width: 620px) {

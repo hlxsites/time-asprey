@@ -59,6 +59,10 @@
   }
 }
 
+.columns.teaser > div > div > h2 {
+  font-size: var(--heading-font-size-m);
+}
+
 @media (min-width: 620px) {
   .columns > div {
     align-items: center;
@@ -101,7 +105,7 @@
   }
 
   .columns.teaser > div > div > h2 {
-    font-size: var(--heading-font-size-l);
+    font-size: var(--heading-font-size-m);
     text-align: left;
   }
 }
