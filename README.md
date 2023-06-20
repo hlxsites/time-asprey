@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# Time.Asprey.com
+Micro site dedicated to time for Asprey
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--time-asprey--hlxsites.hlx.page/
+- Live: https://main--time-asprey--hlxsites.hlx.live/
 
 ## Installation
 
